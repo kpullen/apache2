@@ -9,7 +9,7 @@
 
   <Directory <%= node['apache']['docroot_dir'] %>/>
     Options Indexes FollowSymLinks MultiViews
-    AllowOverride None
+    AllowOverride <%= node['apache']['default_site_allow_override'] ? 'All' : 'None' %>
     <% if node['apache']['version'] == '2.4' -%>
     Require all granted
     # This directive allows us to have apache2's default start page

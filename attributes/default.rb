@@ -278,6 +278,7 @@ default['apache']['locale'] = 'C'
 default['apache']['sysconfig_additional_params'] = {}
 default['apache']['default_site_enabled'] = false
 default['apache']['default_site_port']    = '80'
+default['apache']['default_site_allowed_override'] = false
 default['apache']['access_file_name'] = '.htaccess'
 
 # Security
